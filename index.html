@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>My Portfolio</title>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1> Danny_FX </h1>
+    <p>Front-End Developer | HTML, CSS, JavaScript</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="toggle-btn" id="themeToggle">🌙 Dark Mode</button>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I'm Danny_FX! I'm passionate about building clean and modern websites. 
+      I specialize in HTML, CSS, and I’m learning JavaScript to make my sites interactive. 
+      I enjoy turning ideas into functional designs.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A responsive portfolio site to showcase my work.</p>
+      </div>
+      <div class="project">
+        <h3>Restaurant Landing Page</h3>
+        <p>A clean landing page for a local restaurant.</p>
+      </div>
+      <div class="project">
+        <h3>Blog Layout</h3>
+        <p>A simple blog layout with modern design.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <a href="mailto:youremail@example.com">Email Me</a>
+    <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/" target="_blank">GitHub</a>
+
+    <!-- Hire Me Form -->
+    <form action="https://formspree.io/f/yourFormID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">📩 Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Danny_FX | All Rights Reserved</p>
+  </footer>
+
+  <!-- JavaScript for Theme Toggle -->
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      if(document.body.classList.contains('dark')){
+        toggleBtn.textContent = "☀️ Light Mode";
+      } else {
+        toggleBtn.textContent = "🌙 Dark Mode";
+      }
+    });
+  </script>
+
+</body>
+</html>
